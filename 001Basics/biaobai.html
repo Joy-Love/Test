@@ -14,18 +14,37 @@
         }
         @keyframes myfirst
         {
-            from{opacity: 0}
-            to{opacity:100}
+            0%{opacity: 0}
+            25%{opacity:100}
+            50%{opacity:0}
+            100%{opacity:0}
+        }
+        @keyframes mysecond
+        {
+            0%{opacity: 0}
+            50%{opacity: 0}
+            75%{opacity:100}
+            100%{opacity:0}
         }
         h1,p{
-            animation:myfirst 1s infinite;
+            font-size: 100px;
+            position: absolute;
+            width: 100%;
+            text-align: center;
         }
+        #sheng{
+            animation: myfirst 10s infinite;
+        }
+        #zhu{
+            animation: mysecond 10s infinite;
+        }
+
     </style>
 </head>
 <body>
 <audio src="mp3/bgm.mp3" autoplay="autoplay">
 </audio>
-<h1>生日快乐</h1>
-<p>祝你生日快乐！</p>
+<h1 id="sheng">生日快乐</h1>
+<p id="zhu">祝你生日快乐！</p>
 </body>
 </html>
