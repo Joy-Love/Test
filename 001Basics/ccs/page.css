@@ -21,12 +21,12 @@ page {
     animation: x 10s infinite;
 }
 #q{
-    background-color: aliceblue;
+    background-color: yellowgreen;
     animation: q 10s infinite;
 }
 #d{
-    background-color: black;
-    color: white;
+    background-color:white;
+
     animation: d 10s infinite;
 }
 #z{
