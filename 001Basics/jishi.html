@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>距离某个时间点倒计时</title>
+
+
+</head>
+<body>
+<!--<p style="text-align: center;">-->
+<!--    <span>马荣宽已经在这个世界上生活了</span>-->
+<!--    <span id='birth'></span>-->
+<!--    <span>天</span>-->
+<!--</p>-->
+<!--<script>-->
+<!--    var date = new Date();-->
+<!--    var y = date.getFullYear();-->
+<!--    var m = date.getMonth()+1;-->
+<!--    var d = date.getDate();-->
+<!--    var pass1 = Date.parse('1999/3/16');  //开始的日期-->
+<!--    var pass2 = Date.parse(y+'/'+m+'/'+d);  //当前日期-->
+<!--    var time = (pass2-pass1)/(1000*60*60*24);  //过去的天数-->
+<!--    document.getElementById("birth").innerHTML=(time);-->
+<!--</script>-->
+<h1 id="show">已经：<span></span>天<span></span>小时<span></span>分<span></span>秒</h1>
+
+<script>
+    var show=document.getElementById("show").getElementsByTagName("span");
+
+    setInterval(function(){
+        var timeing=new Date();
+        var str="2020/4/13 00:00:00";
+
+        var time=new Date(str);
+        var num=timeing.getTime()-time.getTime();
+
+        var day=parseInt(num/(24*60*60*1000));
+        num=num%(24*60*60*1000);
+        var hour=parseInt(num/(60*60*1000));
+        num=num%(60*60*1000);
+        var minute=parseInt(num/(60*1000));
+        num=num%(60*1000);
+        var seconde=parseInt(num/1000);
+
+        show[0].innerHTML=day;
+        show[1].innerHTML=hour;
+        show[2].innerHTML=minute;
+        show[3].innerHTML=seconde;
+    },100)
+
+
+</script>
+
+
+
+</body>
+</html>

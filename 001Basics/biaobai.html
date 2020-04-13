@@ -44,12 +44,44 @@
         }
 
     </style>
+
 </head>
 <body>
 <audio src="mp3/bgm.mp3" autoplay="autoplay">
 </audio>
+
 <h1 id="sheng">生日快乐</h1>
 <p id="zhu">祝你生日快乐！</p>
+<h2 id="show">已经：<span></span>天<span></span>小时<span></span>分<span></span>秒</h2>
+<script>
+    alert("你为什么点开这个网页");
+    alert("你是不是很好奇");
+    alert("恭喜你，答对了");
+    var show=document.getElementById("show").getElementsByTagName("span");
+
+    setInterval(function(){
+        var timeing=new Date();
+        var str="2019/4/25 00:20:00";
+
+        var time=new Date(str);
+        var num=timeing.getTime()-time.getTime();
+
+        var day=parseInt(num/(24*60*60*1000));
+        num=num%(24*60*60*1000);
+        var hour=parseInt(num/(60*60*1000));
+        num=num%(60*60*1000);
+        var minute=parseInt(num/(60*1000));
+        num=num%(60*1000);
+        var seconde=parseInt(num/1000);
+
+        show[0].innerHTML=day;
+        show[1].innerHTML=hour;
+        show[2].innerHTML=minute;
+        show[3].innerHTML=seconde;
+    },100)
+
+
+</script>
 </body>
 </html>
 
